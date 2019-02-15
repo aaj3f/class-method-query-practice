@@ -13,16 +13,21 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
+
 RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.infer_base_class_for_anonymous_controllers = false
   config.order = "default"
 
+
   config.before do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.start
     Rails.application.load_seed
   end
 
   config.after do
-    (ActiveRecord::Base.subclasses - [ActiveRecord::SchemaMigration]).each(&:delete_all)
+    DatabaseCleaner.clean
+    # (ActiveRecord::Base.subclasses - [ActiveRecord::SchemaMigration]).each(&:delete_all)
   end
 end
