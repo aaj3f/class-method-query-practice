@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Classification do
+describe DogWalker do
   describe "::my_all" do
     it "returns all classifications" do
       classifications = ["Ketch", "Sailboat", "Catamaran", "Sloop", "Motorboat", "Center Console", "RIB", "Trawler", "Cat Rig Boat", "Bass Boat", "Pontoon Boat"]
