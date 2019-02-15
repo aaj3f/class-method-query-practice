@@ -1,17 +1,18 @@
 require 'spec_helper'
 
 describe DogWalker do
-  describe "::my_all" do
-    it "returns all classifications" do
-      classifications = ["Ketch", "Sailboat", "Catamaran", "Sloop", "Motorboat", "Center Console", "RIB", "Trawler", "Cat Rig Boat", "Bass Boat", "Pontoon Boat"]
-      expect(Classification.my_all.pluck(:name).uniq).to eq(classifications)
+
+  describe "::with_preferred_customers" do
+    it "returns all dog walkers who walk dogs for preferred customers" do
+      dog_walkers = []
+      expect(DogWalker.with_preferred_customers.pluck(:name).uniq).to eq(dog_walkers)
     end
   end
 
-  describe "#longest" do
-    it "returns the classifications for the longest boat" do
-      classifications = ["Motorboat", "Center Console"]
-      expect(Classification.longest.pluck(:name)).to eq(classifications)
+  describe "::method" do
+    it "" do
+      dog_walkers = []
+      expect(DogWalker.method.pluck(:name)).to eq(dog_walkers)
     end
   end
 end

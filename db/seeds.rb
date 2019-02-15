@@ -9,19 +9,19 @@ seina = DogOwner.create(name: "Seina", age: 30, preferred_customer: true)
 fluffys = DogWalkingCompany.create(name: "Fluffy Friends")
 dogdays = DogWalkingCompany.create(name: "Doggy Days")
 
-jim = DogWalker.create(name: "Jim Halpert", dog_walking_company_id: "1", full_time: true)
-pam = DogWalker.create(name: "Pam Beasley", dog_walking_company_id: "1", full_time: true)
-dwight = DogWalker.create(name: "Dwight Schrute", dog_walking_company_id: "2", full_time: true)
-michael = DogWalker.create(name: "Michael Scott", dog_walking_company_id: "2", full_time: true)
-kelly = DogWalker.create(name: "Kelly Kapoor", dog_walking_company_id: "2", full_time: false)
-creed = DogWalker.create(name: "Creed Bratton", dog_walking_company_id: "1", full_time: false)
-angela = DogWalker.create(name: "Angela Martin", dog_walking_company_id: "2", full_time: false)
-phyllis = DogWalker.create(name: "Phyllis Vance", dog_walking_company_id: "1", full_time: false)
-stanley = DogWalker.create(name: "Stanley Hudson", dog_walking_company_id: "1", full_time: false)
-ryan = DogWalker.create(name: "Ryan Howard", dog_walking_company_id: "2", full_time: false)
-oscar = DogWalker.create(name: "Oscar Martinez", dog_walking_company_id: "2", full_time: false)
-kevin = DogWalker.create(name: "Kevin Malone", dog_walking_company_id: "2", full_time: false)
-darryl = DogWalker.create(name: "Darryl Philbin", dog_walking_company_id: "1", full_time: true)
+jim = fluffys.dog_walkers.create(name: "Jim Halpert", full_time: true)
+pam = fluffys.dog_walkers.create(name: "Pam Beasley", full_time: true)
+dwight = dogdays.dog_walkers.create(name: "Dwight Schrute", full_time: true)
+michael = dogdays.dog_walkers.create(name: "Michael Scott", full_time: true)
+kelly = dogdays.dog_walkers.create(name: "Kelly Kapoor", full_time: false)
+creed = fluffys.dog_walkers.create(name: "Creed Bratton", full_time: false)
+angela = dogdays.dog_walkers.create(name: "Angela Martin", full_time: false)
+phyllis = fluffys.dog_walkers.create(name: "Phyllis Vance", full_time: false)
+stanley = fluffys.dog_walkers.create(name: "Stanley Hudson", full_time: false)
+ryan = dogdays.dog_walkers.create(name: "Ryan Howard", full_time: false)
+oscar = dogdays.dog_walkers.create(name: "Oscar Martinez", full_time: false)
+kevin = dogdays.dog_walkers.create(name: "Kevin Malone", full_time: false)
+darryl = fluffys.dog_walkers.create(name: "Darryl Philbin", full_time: true)
 
 max = Dog.new(name: "Max", breed: "Labrador", age: 1, weight: 55, well_trained: false)
 charlie = Dog.new(name: "Charlie", breed: "Golden Retriever", age: 11, weight: 70, well_trained: true)
@@ -63,3 +63,22 @@ ryan.dogs << bailey
 oscar.dogs << bella
 kevin.dogs << sophie
 darryl.dogs << [lucy, oliver]
+
+max.save
+charlie.save
+cooper.save
+buddy.save
+jack.save
+bella.save
+lucy.save
+daisy.save
+luna.save
+lola.save
+bear.save
+oliver.save
+sophie.save
+bailey.save
+rocky.save
+ace.save
+bandit.save
+harley.save
