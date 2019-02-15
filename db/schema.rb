@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 2019_02_15_141503) do
     t.string "name"
     t.integer "dog_walking_company_id"
     t.boolean "full_time"
-    t.boolean "walks_big_dogs"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dog_walking_company_id"], name: "index_dog_walkers_on_dog_walking_company_id"
