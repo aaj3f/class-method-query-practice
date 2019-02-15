@@ -12,6 +12,8 @@ For a top-level summary of why it's worthwhile to chain ActiveRecord::QueryMetho
 
 ## Getting Started
 
-Fork & Clone down this repo, and then run `rake db:migrate && rake db:migrate RAILS_ENV=test`
+Fork & Clone down this repo, run `bundle install`, and then run `rake db:migrate && rake db:migrate RAILS_ENV=test`
 
 Then just start working with the Rspec tests included in the lab (using `rspec` instead of `learn`).
+
+Like the learn-co labs, you'll see that the repo has a "solution" branch, just in case you get stuck and need some help!
